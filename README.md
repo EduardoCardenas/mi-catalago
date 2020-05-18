@@ -3,4 +3,4 @@
 ## Estado actual
 ---------------------
 
-![Preview](/preview/E1/A2.png)
+![Preview](/preview/E1A2.png)
