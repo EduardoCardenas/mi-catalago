@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #27496d;
+    padding: 10px;
+}
+
+.title-text{
+    font-size: 2em;
+}
+
+.personal-logo, .github-logo {
+    height: 32px;
+    padding: 0 20px;
+}
