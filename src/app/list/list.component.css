@@ -17,3 +17,7 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+.propiedad {
+    font-size: 1.1em;
+}
