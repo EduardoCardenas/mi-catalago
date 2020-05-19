@@ -3,16 +3,19 @@
 		
 	<div id="options" class="container-fluid mx-0 px-0">
 		<div class="row mx-0">
-			<div class="col-md-6 option">
-				<div class="option-text">Lista</div>
+			
+			<div class="col-md-6 option" routerLink="/list" routerLinkActive="active-link">
+				<div class="option-text">
+					<a>Lista</a>
+					 
+				</div>
 			</div>
-			<div class="col-md-6 option">
+			<div class="col-md-6 option"  routerLink="/table" routerLinkActive="active-link">
 				<div class="option-text">Tabla</div>
 			</div>
 		</div>	
 	</div>
 
 	<div id="content" class="container-fluid">
-		<app-list></app-list>
 	</div>
 </div>
