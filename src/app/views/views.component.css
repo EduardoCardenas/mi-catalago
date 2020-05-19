@@ -23,10 +23,15 @@
     opacity: 0.9;
 }
 
-.lista:hover, .tabla:hover {
+.lista:hover, .tabla:hover{
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+/*.lista:hover, .tabla:hover {
     font-size: 1.6em;
     opacity: 1;
-}
+}*/
 
 .content {
     flex: 1 0 auto;
