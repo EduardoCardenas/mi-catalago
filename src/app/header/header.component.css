@@ -1,15 +1,14 @@
 header {
-    display: flex;
-    justify-content: space-between;
     background-color: #27496d;
-    padding: 10px;
 }
 
 .title-text{
-    font-size: 2em;
+    font-size: 32px;
 }
 
 .personal-logo, .github-logo {
     height: 32px;
-    padding: 0 20px;
+    padding: 10px 20px 0 20px;
+    
 }
+

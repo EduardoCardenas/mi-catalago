@@ -1,43 +1,19 @@
-
-.container {
-    height: calc(100vh - 58px);
-	display: flex;
-	flex-direction: column;
-}
-
-.options{
- display: flex;
- flex-flow: row wrap;
- justify-content: space-between;
- padding: 10px;
-}
-
-.lista, .tabla {
-    width: 49.7%;
+.option{
     background-color: #00909e;
     text-align: center;
     font-size: 1.5em;
-    padding: 10px 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    opacity: 0.9;
+    opacity: 0.9;   
 }
 
-.lista:hover, .tabla:hover{
+.option:hover{
     opacity: 1.0;
     cursor: pointer;
 }
 
-/*.lista:hover, .tabla:hover {
-    font-size: 1.6em;
-    opacity: 1;
-}*/
-
-.content {
-    flex: 1 0 auto;
-    margin: 0 10px 10px 10px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
+.option-text {
+    padding: 5px 0;
+}
+#content{
     color: black;
+    padding: 15px;
 }

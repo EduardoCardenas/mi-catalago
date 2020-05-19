@@ -1,12 +1,15 @@
-
-<div *ngFor='let auto of autos'>
-    <div class="list-item">
-        <div class="list-item-text">
-					<p>{{auto.descripcion}}</p>
-				</div>
-				
-        <div class="list-item-icon">
-					<img src="assets/img/interface.png" alt="eye">
-				</div>
+<ng-container *ngFor="let auto of autos">
+  <div class="list-item">
+    <div class="list-item-text">
+      {{ auto.descripcion }}
     </div>
+    <div class="list-item-icon" (click)="onSelect(auto)">
+      <img src="assets/img/interface.png" alt="eye" />
+    </div>
+  </div>
+</ng-container>
+
+<div>
+	{{autoSeleccionado?.marca}}  {{autoSeleccionado?.fecha_registro}}
 </div>
+
