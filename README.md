@@ -1,19 +1,16 @@
 # Mi catalogo de automoviles
 
-## Estado actual
+# Nuevas funcionalidades E3 A7
 -------------------------------------
 
-![Preview](/preview/E3A5.PNG)
+## Apartado de tabla
 
-## Versiones anteriores
+![Tabla](/preview/E3A7tabla.PNG)
 
-Etapa 2 Actividad 4
-![Preview](/preview/E2A4.PNG)
+## Página de error
 
--------------------------------------
-Etapa 2 Actividad 3
-![Preview](/preview/E2A3.PNG)
+![Page not found](/preview/E3A6pageNotFound.PNG)
 
--------------------------------------
-Etapa 1 Actividad 2
-![Preview](/preview/E1A2.PNG)
+## Otros cambios
+
+- Se agrego la ruta por defecto que redirige al apartado de lista.
