@@ -1,4 +1,4 @@
-import { Automovil } from './models';
+/*import { Automovil } from './models';
 
 export const AUTOMOVILES: Automovil[] = [
     {
@@ -37,4 +37,4 @@ export const AUTOMOVILES: Automovil[] = [
         fecha_registro: new Date('2020-03-15')
     }
 
-]
+]*/

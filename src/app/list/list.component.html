@@ -1,5 +1,5 @@
-<ng-container *ngFor="let auto of autos">
-  <div class="list-item">
+<ng-container *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+  <div class="list-item mx-2">
     <div class="list-item-text">
       {{ auto.descripcion }}
     </div>
@@ -7,7 +7,11 @@
       <img src="assets/img/interface.png" alt="eye" />
     </div>
   </div>
+  
 </ng-container>
+<div class="d-flex justify-content-center">
+  <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="autos?.length" aria-label="Default pagination"></ngb-pagination>
+
 
 
 <ng-template #content let-modal style="color: black;">
@@ -20,8 +24,9 @@
   <div class="modal-body">
     <p class="propiedad">Marca: {{autoSeleccionado?.marca}}.</p>
     <p class="propiedad">Submarca: {{autoSeleccionado?.submarca}}.</p>
-    <p class="propiedad">Modelo: {{autoSeleccionado?.modelo}}.</p>
+    <p class="propiedad">Modelo: {{autoSeleccionado?.modelos}}.</p>
     <p class="propiedad">Descripción: {{autoSeleccionado?.descripcion}}.</p>
   </div>
 </ng-template>
+
 
