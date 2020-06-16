@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableComponent } from './table/table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ModalAddUpdateComponent } from './modals/modal-add-update/modal-add-update.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ListComponent,
     TableComponent,
     PageNotFoundComponent,
+    ModalAddUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalAddUpdateComponent]
 })
 export class AppModule { }
 
