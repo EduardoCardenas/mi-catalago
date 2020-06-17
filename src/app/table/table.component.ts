@@ -1,3 +1,4 @@
+import { ModalConfirmActionComponent } from './../modals/modal-confirm-action/modal-confirm-action.component';
 import { ModalAddUpdateComponent } from './../modals/modal-add-update/modal-add-update.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,7 @@ export class TableComponent implements OnInit {
   page = 1;
   pageSize = 10;
   autos: Automovil[];
-  constructor( private autosService: AutosService, private modalService: NgbModal) { }
+  constructor(private autosService: AutosService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.autosService.getAutos().subscribe((response) => {
@@ -27,8 +28,25 @@ export class TableComponent implements OnInit {
     modalRef.componentInstance.accion = 'Editar';
 
     modalRef.result.then(
-      (auto)=> {
+      (auto) => {
         this.autosService.updateAutos(auto).subscribe(response => console.log(response));
+      },
+      (reason) => {
+        console.log(reason);
+      }
+    )
+  }
+
+  openModalConfirmarEliminar(auto: Automovil) {
+    const modalRef = this.modalService.open(ModalConfirmActionComponent, {centered: true})
+    modalRef.componentInstance.auto = auto;
+
+    modalRef.result.then(
+      (autoTemp) => {
+        this.autosService.deleteAuto(autoTemp).subscribe(response => {
+          console.log("Respuesta cuando se termina de eliminar un auto");
+          console.log(response);
+        });
       },
       (reason) => {
         console.log(reason);

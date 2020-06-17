@@ -19,4 +19,7 @@ export class AutosService {
     return this.http.put<any>(`${this.autosActionURL}/${auto._id}`, auto);
   }
   
+  deleteAuto(auto: Automovil): Observable<any> {
+    return this.http.delete<any>(`${this.autosActionURL}/${auto._id}`);
+  }
 }

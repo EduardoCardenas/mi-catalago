@@ -1,3 +1,4 @@
+<button class="btn btn-outline-primary">Agregar</button>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -17,7 +18,7 @@
     <td>{{auto?.submarca }}</td>
     <td>{{auto?.descripcion}}</td>
     <td>{{auto?.modelos}}</td>
-    <td><img src="../../assets/img/001-delete.png" alt="delete-icon"></td>
+    <td><img src="../../assets/img/001-delete.png" alt="delete-icon" (click)="openModalConfirmarEliminar(auto)"></td>
     <td><img src="../../assets/img/002-edit.png" alt="edit-icon" (click)="openModalEditar(auto)"></td>
   </tr>
   </tbody>
