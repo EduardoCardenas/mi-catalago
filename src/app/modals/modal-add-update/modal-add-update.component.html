@@ -18,10 +18,20 @@
 		<label for="descripcion">Descripion</label>
 		<input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripcion" [(ngModel)]="auto.descripcion" name="descripcion">
 	</div>
-	<div class="form-group">
+	<p>Modelos:</p>
+	<!--<div class="form-group">
 		<label for="modelos">Modelos</label>
 		<input type="text" class="form-control" id="modelos" placeholder="Agrega los modelos" [(ngModel)]="auto.modelos" name="modelos">
+	</div>-->
+	<div class="form-group">
+		<label for="modelo_desde">Desde</label>
+		<input type="number" class="form-control" id="modelo_desde" name="modelo_desde" min="2000" max="2020" [(ngModel)]="modeloDesde" (change)="generateModels()">
 	</div>
+	<div class="form-group">
+		<label for="modelo_hasta">Hasta</label>
+		<input type="number" class="form-control" id="modelo_hasta" name="modelo_hasta" min="2000" max="2020" [(ngModel)]="modeloHasta" (change)="generateModels()">
+	</div>
+
 </div>
 <div class="modal-footer">
 	<button type="submit" class="btn btn-outline-dark" (click)="activeModal.close(auto)">Guardar</button>

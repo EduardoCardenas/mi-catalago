@@ -10,10 +10,27 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class ModalAddUpdateComponent implements OnInit {
   accion: string;
   auto: Automovil;
-
+  modeloDesde: number;
+  modeloHasta: number;
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {
+    this.modeloDesde = this.auto.modelos[0];
+    this.modeloHasta = this.auto.modelos[this.auto.modelos.length-1];
   }
 
+  generateModels(){
+    let generatedModels: number[] = [];
+    if(this.modeloDesde > this.modeloHasta){
+      console.log('El año desde no puede ser mayor al año hasta.');
+      return;
+    }
+
+    let i: number = this.modeloDesde;
+    while(i <= this.modeloHasta){
+      generatedModels.push(i);
+      ++i;
+    }
+    this.auto.modelos = generatedModels;
+  }
 }
