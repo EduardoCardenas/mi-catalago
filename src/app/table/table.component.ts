@@ -22,6 +22,20 @@ export class TableComponent implements OnInit {
     })
   }
 
+  openModalAgregar(){
+    const modalRef = this.modalService.open(ModalAddUpdateComponent, {centered: true});
+    modalRef.componentInstance.accion = 'Agregar';
+
+    modalRef.result.then(
+      (auto) => {
+        this.autosService.addAuto(auto).subscribe(response => console.log(response));
+      },
+      (reason) => {
+        console.log(reason);
+      }
+    )
+  }
+
   openModalEditar(auto: Automovil) {
     const modalRef = this.modalService.open(ModalAddUpdateComponent, { centered: true });
     modalRef.componentInstance.auto = auto;

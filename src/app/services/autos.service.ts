@@ -15,6 +15,10 @@ export class AutosService {
     return this.http.get<any>(this.autosURL)
   }
 
+  addAuto(auto: Automovil): Observable<any> {
+    return this.http.post<any>(`${this.autosActionURL}`, auto);
+  }
+
   updateAutos(auto: Automovil): Observable<any> {
     return this.http.put<any>(`${this.autosActionURL}/${auto._id}`, auto);
   }
